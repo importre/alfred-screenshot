@@ -2,7 +2,7 @@
 
 📸 Take a screenshot with your beautiful wallpaper.
 
-![usage](https://user-images.githubusercontent.com/1744446/208124121-11b3e6e6-c70a-4a58-85c5-a7a40c36dbba.gif)
+![usage](https://user-images.githubusercontent.com/1744446/208253346-e168ae73-ae3b-4ae0-b80e-44a56a359d5f.gif)
 
 ## Installation
 
@@ -23,12 +23,21 @@
 
 ## Usage
 
+### Pose
+
 1. Select the window you want.
 1. In Alfred, Type `ss`, select a resolution, and then press <kbd>Enter</kbd>.
+1. The active window moves to the center.
+1. Make up!
+
+### Screenshot
+
+1. Select the **same** window.
+1. In Alfred, Type `ss`, select the **same resolution**, and then press <kbd>⌘</kbd> + <kbd>Enter</kbd>.
 1. It will be stored in your **Desktop**. 😎
 
 ## Output Example
 
-![Output Example](https://user-images.githubusercontent.com/1744446/208124097-ffefd6f6-32d3-4405-959e-cb3612210807.png)
+![Output Example](https://user-images.githubusercontent.com/1744446/208253306-2e82a197-8c5f-4f0a-8ce8-595299b8aba7.png)
 
 [releases/latest]: https://github.com/importre/alfred-screenshot/releases/latest

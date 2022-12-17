@@ -4,18 +4,30 @@ function run(argv) {
   const rectangleId = "com.knollsoft.Rectangle";
   const defaultSize = getDefaultSize(rectangleId);
   const { dock, menuBar } = currentDockAndMenuBar();
+  const command = argv[0];
   const targetSize = {
-    width: parseInt(argv[0]) || defaultSize.width,
-    height: parseInt(argv[1]) || defaultSize.height,
+    width: parseInt(argv[1]) || defaultSize.width,
+    height: parseInt(argv[2]) || defaultSize.height,
   };
 
-  try {
-    hidedockAndMenuBar();
-    hideOthers();
-    moveToCenter(defaultSize, targetSize, rectangleId);
-    screenshot(getRect(targetSize));
-  } finally {
-    setDockAndMenuBar(dock, menuBar);
+  switch (command) {
+    case "pose":
+      moveToCenter(defaultSize, targetSize, rectangleId);
+      break;
+
+    case "screenshot":
+      try {
+        hidedockAndMenuBar();
+        hideOthers();
+        moveToCenter(defaultSize, targetSize, rectangleId);
+        screenshot(getRect(targetSize));
+      } finally {
+        setDockAndMenuBar(dock, menuBar);
+      }
+      break;
+
+    default:
+      break;
   }
 }
 

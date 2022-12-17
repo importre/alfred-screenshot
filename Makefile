@@ -9,6 +9,7 @@ bump:
 	@plutil -replace version -string $(VERSION) info.plist
 	@git add info.plist
 	@git commit -m "🔖 $(VERSION)" &> /dev/null || true
+	@git push
 
 build: clean
 	@zip $(OUTPUT) \
@@ -16,6 +17,7 @@ build: clean
 		info.plist \
 		license \
 		readme.md \
+		resolutions.json \
 		screenshot.js &> /dev/null
 
 release: build
